@@ -1,2 +1,2 @@
-# Jeu
-Jeu en python projet avec guillaume
+# Logimage
+Projet Python
