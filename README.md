@@ -15,12 +15,18 @@ résolution en partant du haut avec du bleu
 résolution en partant du bas avec du rouge
 s'il y a des cases avec du orange et du rouge du même numéro alors la mettre en orange.
 effacer les couleurs bleu et rouge
-Si une case est entre deux oranges , mettre une croix 
-Si une case est entre un orange et le bord , mettre une croix 
-Si une colonne ou ligne est finie , mettre croix dans les cases différentes orange 
+résolution en partant de la droite avec du bleu
+résolution en partant de la gauche avec du rouge
+s'il y a des cases avec du orange et du rouge du même numéro alors la mettre en orange.
+effacer les couleurs bleu et rouge
+refaire la méthode droite/gauche, haut/bas mais en prenant en compte les cases oranges (ligne 14-21)
+Si un numéro d'une ligne/colonne est validé (toutes les cases associées sont placées), placer une croix avant et après les cases
+dés qu'un numéro est validé et qu'il est sur le bord, le supprimer de la colonne/ligne
+Si une colonne ou ligne est finie , mettre croix dans les cases différentes du orange 
 Si première case est orange , les cases en dessous sont orange par rapport au numéro du haut 
 Si dernière case est orange , les cases au-dessus sont orange par rapport au numéro du bas
-Si les cases du numéro sont oranges , mettre une croix 
+dés qu'une ligne / colonne du bord est compléter (tous les numéros et croix sont placés), supprimer la colonne
+si une ligne/colonne reste un seul numéro, faire technique droite/gauche, haut/bas et mettre une croix la ou il n'y a pas de couleur (car les cases non colorées ne pourront jamais être colorées
 
 
 
