@@ -36,13 +36,34 @@ def plateauY():
     bouton2=Button(fenetre, text="Valider", command=afficherY)
     bouton2.pack(side=TOP, padx=50, pady=10)
 
+
+def grille ():
+    label_x = Label(fenetre, text="Mettre le nombre de colonne", font=("Courrier",14) , bg="#E68A11" , fg="#FFFFFF")
+    label_x.pack()
+    x = Entry(fenetre)
+    x.pack()
+    def afficherX():
+     print(x.get())
+    bouton1=Button(fenetre, text="Valider", command=afficherX)
+    bouton1.pack(side=TOP, padx=50, pady=10)
+    label_y = Label(fenetre, text="Mettre le nombre de ligne", font=("Courrier",14) , bg="#E68A11" , fg="#FFFFFF")
+    label_y.pack()
+    y = Entry(fenetre)
+    y.pack()
+    def afficherY():
+     print(y.get())
+    bouton2=Button(fenetre, text="Valider", command=afficherY)
+    bouton2.pack(side=TOP, padx=50, pady=10)
+
+
+
 #Création Fenêtre
 fenetre = Tk()
 
 #Informations Fenêtre
 fenetre.title("Logimage")
 fenetre.geometry("1080x720")
-fenetre.minsize(480, 360)
+
 fenetre.iconbitmap("logo.ico")
 fenetre.config(background = "#E68A11")
 
@@ -55,7 +76,7 @@ label_title = Label(frametitle, text="Bienvenue sur Logimage", font=("Courrier",
 label_title.pack()
 
 #Creation Bouton Grille
-grille_button = Button(frametitle, text="Lancer une Partie", font=("Courrier",30) , fg="#E68A11" , bg="#FFFFFF", command=alert)
+grille_button = Button(frametitle, text="Lancer une Partie", font=("Courrier",30) , fg="#E68A11" , bg="#FFFFFF", command=grille)
 grille_button.pack(pady=30)
 
 #Texte Fenêtre Signature
@@ -73,9 +94,11 @@ menubar = Menu(fenetre)
 
 #Choix du Plateau
 menu1 = Menu(menubar, tearoff=0)
-menu1.add_command(label="Valeur X", command=plateauX)
+menu1.add_command(label="10x10", command=alert)
 menu1.add_separator()
-menu1.add_command(label="Valeur Y", command=plateauY)
+menu1.add_command(label="10x10", command=alert)
+menu1.add_separator()
+menu1.add_command(label="10x10", command=alert)
 menu1.add_separator()
 menu1.add_command(label="10x10", command=alert)
 menubar.add_cascade(label="Plateau", menu=menu1)
@@ -96,19 +119,3 @@ fenetre.config(menu=menubar)
 
 #Fin de Fenêtre
 fenetre.mainloop()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
