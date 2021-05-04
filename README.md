@@ -6,6 +6,7 @@ Chaque grille de logimage est un dessin à reconstituer en exploitant les indice
 Trucs et astuces : commencer par les indices les plus élevés. Inutile de faire des suppositions.
 
 # Programme
+lien résolution : https://www.hanjie-star.com/fr-fr/comment-resoudre-picross/resoudre-mon-premier-picross
 Demande le nombre de colonnes et de lignes (X,Y) 
 Faire une boucle : X1 à Xn puis de Y1 à Yn pour tracer la grille
 Demande les numéros des colonnes et lignes
