@@ -25,6 +25,7 @@ class Fenetre(tk.Tk):
             for c in range(10):
                 btn = Bouton(grille, text = 'A%s-O%s' %(r,c), width=5, height=1, bg='white', fg='white')
                 btn.res_abs()
+                btn.res_global_abscisse
                 btn['command'] = btn.cliquer
 
                 btn.grid(row=r, column=c)
@@ -43,14 +44,11 @@ class Fenetre(tk.Tk):
         return ordonnee
 
     def abscisse (self):
-        orr = [[10],[1,3,3],[5,2],[5],[1,1,6],[2,7],[1,2,1],[1,1,1],[1,1],[1,1,1]]
+        orr = [[10],[1,3,3],[10],[5],[10],[10],[1,2,1],[1,1,1],[1,1],[10]]
         abscisse = tk.Frame(self)
         E = 0
         A = 0
         F=[]
-        for a in range(10):
-            print(len(orr[A]))
-            A+=1
 
         for c in range(10):
             for d in range(1):
@@ -65,22 +63,42 @@ class Fenetre(tk.Tk):
 
     def final(self):
         btn['command'] = btn.res_abs
+        btn ['command'] = btn.res_global_abscisse
 
 
 class Bouton(tk.Button):
     def cliquer(self):
         if self['bg'] == 'black':
-             self.config(bg='white')
-             self['text'] = 'X'
+             self.config(bg='white',text='X')
         elif self['text'] == 'X':
             self['text']= ''
         else:
             self['bg'] = 'black'
             self['fg'] = 'black'
     def res_abs(self):
-        if self['text'] == 'A0-O1':
-            print('ok')
-            self.config(bg='black')
+        orr = [[10],[1,3,3],[10],[5],[10],[10],[1,2,1],[1,1,1],[1,1],[10]]
+        for A in range (len(orr)):
+            B = str(A)
+            C = orr[A]
+            for i in range (len(C)):
+                D = C[i]
+                if D == len(orr):
+                    for j in range(10):
+                        x = 'A'+str(j)+'-O'+B
+                        if self['text'] == x:
+                            self.config(bg='black')
+
+    def res_global_abscisse(self):
+        orr = [[10],[1,3,3],[5,2],[5],[1,1,6],[2,7],[1,2,1],[1,1,1],[1,1],[1,1,1]]
+        ab = [[0],[10],[4,1],[3,3,1],[7],[1,3,2],[2,2],[2,2,1],[3,3,1],[1,2,3]]
+        A=0
+        print(x)
+        for i in range (ab[A]):
+            if ab[i] == len(orr):
+               self.config(bg='black')
+               print(i)
+        A+=1
+        return res_global_abscisse
 
 
 
