@@ -11,9 +11,9 @@ Il suffit de prendre les 2 fichiers pythons puis une grille aléatoire est lanc�
 
 Objectif Futur :
 
--Améliorer la forme de l'interface et le visuel 
--Rajouter d'autres jeux 
--Faire un site avec un launcher pour mettre à jour le fichier automatiquement
+Améliorer la forme de l'interface et le visuel 
+Rajouter d'autres jeux 
+Faire un site avec un launcher pour mettre à jour le fichier automatiquement
 
 
 # Contact
