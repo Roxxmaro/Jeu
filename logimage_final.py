@@ -1,8 +1,17 @@
 from random import randint
 
-taille_max = 20
+taille_max = 5
 
 def creation_tableau(var1 = randint(5,taille_max) ,var2 = randint(5,taille_max)):
+#########################################
+### fonction creation_tableau
+# Cette fonction permet de préparer un tableau de jeu aléatoire.
+# Chaque cellule est rempli au hasard, avec une chance sur 2 d'etre une croix.
+# les dimensions sont définies par 2 variables : var1 et var2 (entre 5 et taille_max)
+######
+# sortie : la grille de jeu.
+###
+#########################################
     tableau = [['O' for i in range(var1)]for i in range(var2)]
     for i in range(var2):
         for j in range(var1):
@@ -12,6 +21,16 @@ def creation_tableau(var1 = randint(5,taille_max) ,var2 = randint(5,taille_max))
     return tableau
 
 def compte_ligne(tab):
+#########################################
+### fonction compte_ligne
+# Cette fonction permet de compter les blocs de cases (en ligne)
+# Un bloc de cases est une serie continue de cases remplies d'un 'X'
+# (pour compter les blocs "colonnes", il faudra appeller cette fonction en inversant le tableau
+######
+# entrée : une grille de jeu (taille aléatoire)
+# sortie : un tableau de comptage des blocs en ligne.
+###
+#########################################
     rep = []
     n = 0
     for i in range(len(tab)):
@@ -31,6 +50,15 @@ def compte_ligne(tab):
     return rep
 
 def inver_col_lig(tab):
+#########################################
+### fonction inver_col_lig
+# Cette fonction permet d'inverser un tableau
+# Les lignes passent en colonne et vice-versa
+######
+# entrée : une grille de jeu (taille aléatoire)
+# sortie : la grille de jeu inversée.
+###
+#########################################
     tab_f = []
     for i in range(len(tab[0])):
         tab_inter = []
